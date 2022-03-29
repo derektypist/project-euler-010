@@ -15,3 +15,23 @@ function getNumberInfo() {
     // Display Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
+
+/*
+    Function to return the sum of all the primes below n
+    primeSummation(10) returns 17
+    primeSummation(17) returns 41
+*/
+function primeSummation(n) {
+    let isPrime = Array(n).fill(true);
+    isPrime[0] = false;
+    isPrime[1] = false;
+    for (let i=2;i<=Math.sqrt(n-1);i++) {
+        if (isPrime[i]) {
+            for (let j=i*i;j<n;j+=i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+
+    return isPrime.reduce((sum,prime,index) => prime ? sum + index : sum,0);
+}
