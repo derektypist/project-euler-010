@@ -37,7 +37,7 @@ function primeSummation(n) {
 
     let sum = 0;
     for (let i=0;i<primes.length;i++) {
-        sum = sum += primes[i];
+        sum += primes[i];
     }
 
     return sum;
