@@ -35,7 +35,12 @@ function primeSummation(n) {
         }
     }
 
-    return primes.reduce((p,c) => p + c, 0);
+    let sum = 0;
+    for (let i=0;i<primes.length;i++) {
+        sum = sum += primes[i];
+    }
+
+    return sum;
 }
 
 // Function to Clear Information
