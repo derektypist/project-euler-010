@@ -22,9 +22,11 @@ function getNumberInfo() {
     primeSummation(17) returns 41
 */
 function primeSummation(n) {
+
+    let sumPrimes;
    
     if (n>2) {
-        let sumPrimes = 2;
+        sumPrimes = 2;
     } else {
         return 0;
     }
