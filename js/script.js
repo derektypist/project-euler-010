@@ -30,7 +30,7 @@ function primeSummation(n) {
     } else {
         return 0;
     }
-    for (let i=3;i<=Math.floor(Math.sqrt(n));i+=2) {
+    for (let i=3;i<n;i+=2) {
         if (isPrime(i)) sumPrimes += i;
     }
 
