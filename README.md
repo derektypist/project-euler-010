@@ -35,3 +35,29 @@ As a user, I expect the function `primeSummation(2000000)` to return 14291382892
 
 The function `primeSummation(n)` returns a number (integer), where n is a number between 2 and 5000000.
 
+## Features
+
+Allows the user to enter a number, as well as getting the sum of the primes below that number.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.
+
+## Technologies
+
+Uses HTML5, CSS3, JavaScript, Bootstrap 5.1.3 and Google Fonts.
+
+## Testing
+
+Ensure all user stories have been met.
+
+## Deployment
+
+Deployed on [GitHub Pages](https://derektypist.github.io/project-euler-010) at the main branch.
+
+## Credits
+
+### Content
+
+Written by me.
+
+### Acknowledgements
+
+- [Project Euler](https://projecteuler.net)
+- [FreeCodeCamp](https://www.freecodecamp.org)
