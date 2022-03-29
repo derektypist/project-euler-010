@@ -22,7 +22,7 @@ function getNumberInfo() {
     primeSummation(17) returns 41
 */
 function primeSummation(n) {
-    let isPrime = Array(n).fill(true);
+    let isPrime = new Array(n).fill(true);
     isPrime[0] = false;
     isPrime[1] = false;
     let primes = [];
