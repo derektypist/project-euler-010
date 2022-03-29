@@ -35,3 +35,9 @@ function primeSummation(n) {
 
     return isPrime.reduce((sum,prime,index) => prime ? sum + index : sum,0);
 }
+
+// Function to Clear Information
+function clearInfo() {
+    let txt = "";
+    document.getElementById("numinfo").innerHTML = txt;
+}
