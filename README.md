@@ -31,3 +31,7 @@ As a user, I expect the function `primeSummation(140759)` to return 873608362.
 
 As a user, I expect the function `primeSummation(2000000)` to return 142913828922.
 
+**Information Architecture**
+
+The function `primeSummation(n)` returns a number (integer), where n is a number between 2 and 5000000.
+
