@@ -25,15 +25,17 @@ function primeSummation(n) {
     let isPrime = Array(n).fill(true);
     isPrime[0] = false;
     isPrime[1] = false;
+    let primes = [];
     for (let i=2;i<=Math.sqrt(n-1);i++) {
         if (isPrime[i]) {
+            primes.push(i);
             for (let j=i*i;j<n;j+=i) {
                 isPrime[j] = false;
             }
         }
     }
 
-    return isPrime.reduce((sum,prime,index) => prime ? sum + index : sum,0);
+    return primes.reduce((p,c) => p + c, 0);
 }
 
 // Function to Clear Information
