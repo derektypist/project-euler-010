@@ -22,25 +22,32 @@ function getNumberInfo() {
     primeSummation(17) returns 41
 */
 function primeSummation(n) {
-    let isPrime = new Array(n).fill(true);
-    isPrime[0] = false;
-    isPrime[1] = false;
-    let primes = [];
-    for (let i=2;i<=Math.sqrt(n-1);i++) {
-        if (isPrime[i]) {
-            primes.push(i);
-            for (let j=i*i;j<n;j+=i) {
-                isPrime[j] = false;
-            }
-        }
+   
+    if (n>2) {
+        let sumPrimes = 2;
+    } else {
+        return 0;
+    }
+    for (let i=3;i<=Math.floor(Math.sqrt(n));i+=2) {
+        if (isPrime(i)) sumPrimes += i;
     }
 
-    let sum = 0;
-    for (let i=0;i<primes.length;i++) {
-        sum += primes[i];
-    }
+    return sumPrimes;
+}
 
-    return sum;
+/*
+    Function to Represent Primality of number n
+    function isPrime(2) returns true
+    function isPrime(9) returns false
+*/
+function isPrime(n) {
+    if (n<2) return false;
+    if (n==2) return true;
+    if (n>2 && n%2==0) return false;
+    for (let i=3;i<=Math.floor(Math.sqrt(n));i+=2) {
+        if (n%i==0) return false;
+    }
+    return true;
 }
 
 // Function to Clear Information
